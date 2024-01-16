@@ -1,0 +1,30 @@
+.products-background {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.products-container {
+  width: 800px;
+  padding: 50px 20px 50px;
+  margin-top: 50px;
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.empty-products {
+  font-size: 2.5rem;
+  width: 360px;
+  margin-top: 40vh;
+}
+
+@media screen and (max-width: 480px) {
+  .empty-products {
+    font-size: 1.75rem;
+    width: 250px;
+  }
+}
