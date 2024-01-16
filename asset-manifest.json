@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Mercado-Livre-Site/static/css/main.872ad971.css",
+    "main.js": "/Mercado-Livre-Site/static/js/main.65a9573b.js",
+    "index.html": "/Mercado-Livre-Site/index.html",
+    "main.872ad971.css.map": "/Mercado-Livre-Site/static/css/main.872ad971.css.map",
+    "main.65a9573b.js.map": "/Mercado-Livre-Site/static/js/main.65a9573b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.872ad971.css",
+    "static/js/main.65a9573b.js"
+  ]
+}
