@@ -18,13 +18,6 @@ export default function ProductInCart({
   const { id, title, thumbnail, price } = product;
 
   function handleRemoveToCart(id: string) {
-    /*     const cart = localStorage.getItem("cart");
-    const cartArray = cart ? JSON.parse(cart) : [];
-    const newCart = cartArray.filter((item: ProductType) => item.id !== id);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-
-    setItemsInCart(newCart); */
-
     const itemRemoved = itemsInCart.find((item) => item.id === id);
 
     if (itemRemoved && itemRemoved?.quantityChosen > 1) {

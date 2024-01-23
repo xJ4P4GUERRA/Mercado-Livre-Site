@@ -1,14 +1,14 @@
 
 .cart-items::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
+  height: 0.625rem;
+  width: 0.625rem;
 }
 .cart-items::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
 
 .cart-items::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background-color: #000000;
 }
 
@@ -22,7 +22,7 @@
 .cart-container {
   background-color: #ffffff;
 
-  width: 300px;
+  width: 18.75rem;
   height: calc(100% - 89px);
 
   position: fixed;
@@ -43,16 +43,15 @@
 
 .empty-cart {
   color: #808080;
-
   height: 100%;
   padding-top: calc(37vh);
-  margin-left: 35px;
+  margin-left: 2.25rem;
 }
 
 .totalValue-container {
   background-color: #ffffff;
   border-top: 1px solid #d3d3d3;
-  padding: 20px 0 20px 20px;
+  padding: 1.25rem 0 1.25rem 1.25rem;
 }
 
 .totalValue {

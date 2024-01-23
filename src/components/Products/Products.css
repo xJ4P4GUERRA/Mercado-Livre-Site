@@ -8,23 +8,23 @@
 }
 
 .products-container {
-  width: 800px;
-  padding: 50px 20px 50px;
-  margin-top: 50px;
+  width: 50rem;
+  padding: 3.125rem 1.25rem 3.125rem;
+  margin-top: 3.125rem;
   display: none;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+  gap: 1.25rem;
 }
 
 .empty-products {
   font-size: 2.5rem;
-  width: 360px;
+  width: 22.5rem;
   margin-top: 40vh;
 }
 
 @media screen and (max-width: 480px) {
   .empty-products {
     font-size: 1.75rem;
-    width: 250px;
+    width: 15.75rem;
   }
 }

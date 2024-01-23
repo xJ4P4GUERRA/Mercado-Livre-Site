@@ -2,7 +2,7 @@ import ProductType from "../../types/ProductType";
 import "./Cart.css";
 import ProductInCart from "./ProductInCart/ProductInCart";
 
-type CartProps = {
+interface CartProps {
   itemsInCart: ProductType[];
   setItemsInCart: React.Dispatch<React.SetStateAction<ProductType[]>>;
   totalValue: number;

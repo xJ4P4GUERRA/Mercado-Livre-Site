@@ -1,25 +1,28 @@
 .product-container {
   cursor: pointer;
   background-color: white;
+
   width: 100%;
-  max-width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 15rem;
   margin: 0 auto;
 
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-container img {
-  width: 95%;
   border-bottom: 1px solid lightgrey;
+  width: 95%;
 }
 
 .product-container .details {
-  padding-top: 10px;
-  padding-bottom: 10px;
   width: 90%;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -27,30 +30,30 @@
 
 .product-container .details .price {
   color: black;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
 .product-container .details .title {
-  margin-top: 8px;
   color: grey;
   text-align: start;
+  margin-top: 0.5rem;
 }
 
 .product-container .add-cart {
   cursor: pointer;
   background-color: transparent;
+  color: rgb(6, 80, 240);
   border: none;
 
-  width: 40px;
-  height: 40px;
-  font-size: 25px;
-  line-height: 15px;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1rem;
 
   position: absolute;
   top: 12px;
   right: 12px;
-  color: rgb(6, 80, 240);
 }
 
 .product-container .add-cart:hover {

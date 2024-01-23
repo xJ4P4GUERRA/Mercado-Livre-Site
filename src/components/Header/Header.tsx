@@ -1,25 +1,33 @@
+import "./Header.css";
 import React, { useState, useEffect } from "react";
-import getProducts from "../../api/Api";
+
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import "./Header.css";
 import ProductType from "../../types/ProductType";
 
-type HeaderProps = {
+import { handleSubmit } from "../../api/Submit";
+
+interface HeaderProps {
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
+  lastSearch: string;
+  setLastSearch: React.Dispatch<React.SetStateAction<string>>;
   setProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
+  showMore: number;
   itemsInCart: ProductType[];
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   showCart: boolean;
   setShowCart: React.Dispatch<React.SetStateAction<boolean>>;
-};
+}
 
 export default function Header({
   input,
   setInput,
+  lastSearch,
+  setLastSearch,
   setProducts,
+  showMore,
   itemsInCart,
   setLoading,
   showCart,
@@ -29,36 +37,39 @@ export default function Header({
 
   useEffect(() => {
     setInput(inputChange);
-  }, [inputChange, setInput]);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const loading = document.getElementById("loading");
-    loading?.style.setProperty("display", "flex");
-    setLoading(true);
-    setInput(inputChange);
-
-    await getProducts(input).then((data) => {
-      const products = data.slice(0, 24);
-      setProducts(products);
-      setLoading(false);
-      loading?.style.setProperty("display", "none");
-    });
-  };
+  }, [inputChange]);
 
   return (
     <header className="header">
       <div className="container">
-        <form action="" className="search-bar" onSubmit={handleSubmit}>
+
+        <form
+          className="search-bar"
+          onSubmit={(e) =>
+            handleSubmit({
+              e,
+              setLoading,
+              input,
+              setInput,
+              inputChange,
+              showMore,
+              lastSearch,
+              setLastSearch,
+              setProducts,
+            })
+          }
+        >
           <input
             onChange={(e) => setInputChange(e.target.value)}
             type="search"
             placeholder="Search products"
             required
           />
+
           <button type="submit">
             <BsSearch />
           </button>
+
         </form>
 
         <button className="cart" onClick={() => setShowCart(!showCart)}>
@@ -73,6 +84,7 @@ export default function Header({
             </div>
           ) : null}
         </button>
+
       </div>
     </header>
   );
