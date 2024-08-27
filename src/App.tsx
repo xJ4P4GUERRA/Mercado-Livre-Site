@@ -12,6 +12,7 @@ import ProductType from "./types/ProductType";
 function App() {
   const [input, setInput] = useState<string>("");
   const [lastSearch, setLastSearch] = useState<string>("");
+  const [searched, setSearched] = useState<boolean>(false);
   const [products, setProducts] = useState<ProductType[]>([]);
   const [showMore, setShowMore] = useState<number>(24);
   const [loading, setLoading] = useState<boolean>(true);
@@ -26,6 +27,7 @@ function App() {
         setInput={setInput}
         lastSearch={lastSearch}
         setLastSearch={setLastSearch}
+        setSearched={setSearched}
         setProducts={setProducts}
         showMore={showMore}
         itemsInCart={itemsInCart}
@@ -35,6 +37,7 @@ function App() {
       />
 
       <Products
+        searched={searched}
         products={products}
         itemsInCart={itemsInCart}
         setItemsInCart={setItemsInCart}

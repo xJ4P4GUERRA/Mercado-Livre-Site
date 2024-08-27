@@ -10,6 +10,7 @@ interface handleSubmitProps {
   showMore: number;
   lastSearch: string;
   setLastSearch: React.Dispatch<React.SetStateAction<string>>;
+  setSearched: React.Dispatch<React.SetStateAction<boolean>>;
   setProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
 }
 
@@ -22,6 +23,7 @@ export const handleSubmit = async ({
   showMore,
   lastSearch,
   setLastSearch,
+  setSearched,
   setProducts,
 }: handleSubmitProps) => {
   e.preventDefault();
@@ -33,6 +35,7 @@ export const handleSubmit = async ({
 
   await getProducts(input).then((data) => {
     const products = data.slice(0, showMore);
+    setSearched(true);
     setProducts(products);
     setLoading(false);
     loading?.style.setProperty("display", "none");

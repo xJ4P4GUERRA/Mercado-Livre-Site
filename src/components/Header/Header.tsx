@@ -13,6 +13,7 @@ interface HeaderProps {
   setInput: React.Dispatch<React.SetStateAction<string>>;
   lastSearch: string;
   setLastSearch: React.Dispatch<React.SetStateAction<string>>;
+  setSearched: React.Dispatch<React.SetStateAction<boolean>>;
   setProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
   showMore: number;
   itemsInCart: ProductType[];
@@ -26,6 +27,7 @@ export default function Header({
   setInput,
   lastSearch,
   setLastSearch,
+  setSearched,
   setProducts,
   showMore,
   itemsInCart,
@@ -55,6 +57,7 @@ export default function Header({
               showMore,
               lastSearch,
               setLastSearch,
+              setSearched,
               setProducts,
             })
           }
