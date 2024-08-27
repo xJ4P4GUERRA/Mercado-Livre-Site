@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Mercado-Livre-Site/static/css/main.bfff7799.css",
-    "main.js": "/Mercado-Livre-Site/static/js/main.ab799483.js",
+    "main.js": "/Mercado-Livre-Site/static/js/main.bfce8146.js",
     "index.html": "/Mercado-Livre-Site/index.html",
     "main.bfff7799.css.map": "/Mercado-Livre-Site/static/css/main.bfff7799.css.map",
-    "main.ab799483.js.map": "/Mercado-Livre-Site/static/js/main.ab799483.js.map"
+    "main.bfce8146.js.map": "/Mercado-Livre-Site/static/js/main.bfce8146.js.map"
   },
   "entrypoints": [
     "static/css/main.bfff7799.css",
-    "static/js/main.ab799483.js"
+    "static/js/main.bfce8146.js"
   ]
 }
